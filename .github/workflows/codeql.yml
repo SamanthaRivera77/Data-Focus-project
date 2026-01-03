@@ -23,7 +23,7 @@ rows.forEach(row=>{
         values.push(parseFloat(cols[1]));  // weather value
       }
 new Chart(ctx, 1
-type: 'line'
+type: 'line' {
 data: { Weather Data - Sheet1.csv )
 labels: labels, datasets:[{
 label: 'Weather data' : values,
