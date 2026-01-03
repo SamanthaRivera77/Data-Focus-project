@@ -1,47 +1,57 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title> My Weather Data  Project</title>
-        <link= rel"stylesheet" href="style.css">li 
-    </head>
-    <body>
-        <h1> My Data Visualization Project</h1>
-       <canvas id="myChart" width="400" height="200"></canvas>
-         <script src="script.js"></script>   
-    </body>
-</html>
-fetch('data/Weather Data - Sheet1.csv )
-.then(response=>(response.text())
-.then csv => {
-const row.csv.split ('/n').slice(1);
-const  labels = [Dates];
-const  values =[Weather];
-rows.forEach(row=>{
+const ctx = document.getElementById('myChart').getContext('2d');
+
+fetch('data/Weather Data - Sheet1.csv')
+  .then(response => response.text())
+  .then(csv => {
+    const rows = csv.split('\n').slice(1);
+
+    const labels = [];
+    const values = [];
+
+    rows.forEach(row => {
+      const cols = row.split(',');
 
       if (cols.length >= 2) {
-        labels.push(cols[0]);              // Dates
-        values.push(parseFloat(cols[1]));  // weather value
+        labels.push(cols[0]);              // Date
+        values.push(parseFloat(cols[1]));  // Weather value
       }
-new Chart(ctx, {
-  type: 'line',
-data: { Weather Data - Sheet1.csv )
-labels: labels, datasets:[{
-label: 'Weather data' : values,
-borderWidth: 2
- options: {
-    responsive: true,
-    plugins: {
-      title: {
+    });
+
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Weather Data',
+          data: values,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          title: {
+            display: true,
+            text: 'Weather in New York'
+          }
+        },
         scales: {
-x: { title: { display: true, text: 'Dates' } 3,
-y: { title: { display: true,
-text: 'temperature fahrenheit '  }display: true,
-        text: 'Weather in New York'
+          x: {
+            title: {
+              display: true,
+              text: 'Dates'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Temperature (Fahrenheit)'
+            }
+          }
+        }
       }
-  }]
-    }
-    }) ;
-    }) ;
+    });
+  });
 body {
   font-family: Arial, sans-serif;
   background-color: #ff990b;
