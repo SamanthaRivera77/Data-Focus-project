@@ -18,7 +18,7 @@ fetch('data/Weather Data - Sheet1.csv')
     });
 
     new Chart(ctx, {
-      type: 'line',
+      type: 'line'
       data: {
         labels: labels,
         datasets: [{
