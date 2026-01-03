@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> My Weather Data  Project</title>
+        <link= rel"stylesheet" href="style.css">li 
+    </head>
+    <body>
+        <h1> My Data Visualization Project</h1>
+       <canvas id="myChart" width="400" height="200"></canvas>
+         <script src="script.js"></script>   
+    </body>
+</html>
+fetch('data/Weather Data - Sheet1.csv )
+.then(response=>(response.text())
+.then csv => {
+const row.csv.split ('/n').slice(1);
+const  labels = [Dates];
+const  values =[Weather];
+rows.forEach(row=>{
+
+      if (cols.length >= 2) {
+        labels.push(cols[0]);              // Dates
+        values.push(parseFloat(cols[1]));  // weather value
+      }
+new Chart(ctx, 1
+type: 'line'
+data: { Weather Data - Sheet1.csv )
+labels: labels, datasets:[{
+label: 'Weather data' : values,
+borderWidth: 2
+ options: {
+    responsive: true,
+    plugins: {
+      title: {
+        scales: {
+x: { title: { display: true, text: 'Dates' } 3,
+y: { title: { display: true,
+text: 'temperature fahrenheit '  }display: true,
+        text: 'Weather in New York'
+      }
+  }]
+    }
+    }) ;
+    }) ;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ff990b;
+  text-align: center;
+}
+
+canvas {
+  max-width: 800px;
+  margin: 40px auto;
+  display: block;
+
+}button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: #0f8e64;
+  color: black;
+}
+button:active {
+  transform: scale(0.98);
+}   
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px #2a1caa;
+}
