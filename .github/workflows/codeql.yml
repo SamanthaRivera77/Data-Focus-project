@@ -22,8 +22,8 @@ rows.forEach(row=>{
         labels.push(cols[0]);              // Dates
         values.push(parseFloat(cols[1]));  // weather value
       }
-new Chart(ctx, 1
-type: 'line' {
+new Chart(ctx, {
+  type: 'line',
 data: { Weather Data - Sheet1.csv )
 labels: labels, datasets:[{
 label: 'Weather data' : values,
